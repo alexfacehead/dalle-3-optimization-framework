@@ -3,4 +3,5 @@ Pillow
 scikit-image
 pybrisque
 libsvm
+pytoch
 pytorch_msssim

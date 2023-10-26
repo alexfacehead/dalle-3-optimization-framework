@@ -4,3 +4,9 @@ analyzed/*
 venv
 .DS_Store
 sort_by_similarity.py
+EasyGPT-3.5/tree_structure.sh
+EasyGPT-3.5/file_structure.sh
+EasyGPT-3.5/.env
+EasyGPT-3.5/__pycache__
+EasyGPT-3.5/logs/
+__pycache__
