@@ -8,6 +8,8 @@ EasyGPT-3.5/tree_structure.sh
 EasyGPT-3.5/file_structure.sh
 EasyGPT-3.5/.env
 EasyGPT-3.5/__pycache__
-EasyGPT-3.5/logs/
+EasyGPT-3.5/logs/*
+EasyGPT-3.5/resources/prompts/*
+EasyGPT-3.5/resources/units2/*
 __pycache__
 .env
