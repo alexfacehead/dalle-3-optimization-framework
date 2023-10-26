@@ -5,3 +5,4 @@ pybrisque
 libsvm
 pytoch
 pytorch_msssim
+openai

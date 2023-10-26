@@ -4,11 +4,11 @@ import json
 from typing import Optional
 from termcolor import colored
 
-from src.utils.logging import Logger
-from src.content_generator import ContentGenerator
-from src.utils.helpers import format_string
-from src.utils.env_setup import EnvironmentSetup
-from src.utils.file_handler import *
+from easygpt.src.utils.logging import Logger
+from easygpt.src.content_generator import ContentGenerator
+from easygpt.src.utils.helpers import format_string
+from easygpt.src.utils.env_setup import EnvironmentSetup
+from easygpt.src.utils.file_handler import *
 
 env_and_flags = EnvironmentSetup()
 

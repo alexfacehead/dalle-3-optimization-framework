@@ -13,3 +13,5 @@ EasyGPT-3.5/resources/prompts/*
 EasyGPT-3.5/resources/units2/*
 __pycache__
 .env
+tree_structure.sh
+file_structure.sh

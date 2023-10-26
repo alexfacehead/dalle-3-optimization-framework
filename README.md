@@ -99,6 +99,8 @@ Now, please enjoy running the evaluations and observing any quality increases, a
 ## Generating Your Own Prompts
 Using EasyGPT-3.5 is as easy as setting your environment variables within the directory. This will be streamlined in future versions, but command-line support is already active.
 
+Run easygpt by executing `[python-distro] -m easygpt` and then use it to generate enhanced prompts (by default, it uses gpt-3.5-turbo-16k)
+
 **You don't need GPT-4 API access for this, just an OpenAI API account, which is as easy as signing up on their website. It is incredibly cheap to use the gpt-3.5 series models!**
 
 Run it using: `[python-distro] EasyGPT-3.5/main.py` and use the `-h` flag for help. If you do not wish to setup your environment template (located at `EasyGPT-3.5/env.template` - rename it to `.env` if you do wish to use it) then simply use the commandline flags, as speciefied by the `-h` flag.
