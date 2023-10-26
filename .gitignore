@@ -10,3 +10,4 @@ EasyGPT-3.5/.env
 EasyGPT-3.5/__pycache__
 EasyGPT-3.5/logs/
 __pycache__
+.env

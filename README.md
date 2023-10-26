@@ -96,6 +96,22 @@ To do this:
 
 Now, please enjoy running the evaluations and observing any quality increases, and feel free to provide compelling datasets and share them with the community. To contribute, if you want to be a collaborator, contact me directly at ahugi@uw.edu with "DALLE 3 EVALUATION REPO" as the title for a faster response.
 
+## Generating Your Own Prompts
+Using EasyGPT-3.5 is as easy as setting your environment variables within the directory. This will be streamlined in future versions, but command-line support is already active.
+
+**You don't need GPT-4 API access for this, just an OpenAI API account, which is as easy as signing up on their website. It is incredibly cheap to use the gpt-3.5 series models!**
+
+Run it using: `[python-distro] EasyGPT-3.5/main.py` and use the `-h` flag for help. If you do not wish to setup your environment template (located at `EasyGPT-3.5/env.template` - rename it to `.env` if you do wish to use it) then simply use the commandline flags, as speciefied by the `-h` flag.
+
+Prompt it by asking it a simple 1-2 sentence question, for example:
+`How can I improve an image prompt designed for a state-of-the-art language model?`
+
+It will return to you a series of expanded prompts and context, where the final two results are:
+1. A "tree-of-thought", expertly optimized prompt designed to answer your question.
+2. An answer, which you can then use as context for applying an update to your existing prompt.
+
+This will be further adapted and streamlined for future versions of this project.
+
 # TO DO
 - Easier system for automatically generating images, grabbing them, and arranging them so they may be tested.
 - Unit testing support.
