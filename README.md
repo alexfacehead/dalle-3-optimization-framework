@@ -9,8 +9,8 @@ Through unit testing, the goal is to prove that DALLE-3 is not fully optimized, 
 ## Features
 - Detailed metrics with standardization to help assess relative image quality
 - Detailed instructions on how to run your own evals
-- (soon) Integrated prompt enhancers using OpenAI's API (requires a key)
-- (soon) An interface for developing your own prompt enhancers using my "EasyGPT-3.5" prompt generator.
+- Premade prompt enhancers that can be used with ChatGPT if you lack an API key or API gpt-4 access.
+- (Almost there!) An interface for developing your own prompt enhancers using my "EasyGPT-3.5" prompt generator (requires API key and `.env` setup, repository, with instructions, located at [EasyGPT-3.5](https://github.com/alexfacehead/EasyGPT-3.5))
 
 ## It Starts with a Base prompt
 
@@ -52,21 +52,45 @@ To do this:
 15. Once tests are passed (there may be build issues that arise), proceed to the next step.
 
 ## Setup FFmpeg with VMAF Support for Proper Metrics and Analysis
-1. You will have to build FFmpeg yourself, so run `git clone https://github.com/FFmpeg/FFmpeg.git` wherever, so long as you can access that directory later.
-2. Run ```./configure --enable-libvmaf
 
-make -j4
+1. You will have to build FFmpeg yourself. Run the following command at your desired directory:
+   ```
+   git clone https://github.com/FFmpeg/FFmpeg.git
+   ```
 
-make install``` As three separate commands.
-3. If everything goes well, after a semi-lengthy build time of ~5-10 minutes on a decent computer, you should now have VMAF support.
-4. To test this, run:
-`[path-to-ffmpeg binary] -filters | grep vmaf` and you should see something like `libvmaf` in the output, near the bottom most likely.
-5. For example, I would run, on macOS Monterey 12.6.8, using brew as my main package manager system-wide:
-`/usr/local/bin/FFmpeg/ffmpeg -filters | grep vmaf`
-Be sure to run the binary, not the folder.
-6. If you get permissions errors, navigate to the location of your ffmpeg binary (it doesn't need to be in `/usr/local/bin`, as long as it has correct permissions) and run `chmod -R +x $(pwd)`
-7. Once you have it installed, and have verified that VMAF is supported, go ahead and use the following as parameters to your program (`--ffmpeg-location="/usr/local/bin/FFmpeg/ffmpeg"` for example, and also `--vmaf-model-location="/Users/alexf/dev/evals-testing/venv/lib/python3.11/site-packages/vmaf/model/vmaf_v0.6.1.json"` for example)
-8. Adjust the paths as needed, as these are my system paths. To locate your model location, simply return to the vmaf folder which you cloned earlier and find the `vmaf_v0.6.1.json` file.
+2. Navigate to the directory where you cloned FFmpeg and run the following commands sequentially:
+   ```
+   ./configure --enable-libvmaf
+   make -j4
+   make install
+   ```
+
+3. If everything goes well, after a build time of approximately 5-10 minutes on a decent computer, you should have VMAF support enabled.
+
+4. To test this, run the following command, replacing `[path-to-ffmpeg-binary]` with the actual path to your FFmpeg binary:
+   ```
+   [path-to-ffmpeg-binary] -filters | grep vmaf
+   ```
+   You should see something like `libvmaf` in the output, likely near the bottom.
+
+5. For macOS users, especially if using Homebrew, the typical path might be:
+   ```
+   /usr/local/bin/FFmpeg/ffmpeg -filters | grep vmaf
+   ```
+
+6. If you encounter permissions errors, navigate to the location of your FFmpeg binary (regardless of its location) and run:
+   ```
+   chmod -R +x $(pwd)
+   ```
+
+7. Once VMAF support is verified, use the following parameters in your program:
+   ```
+   --ffmpeg-location="/usr/local/bin/FFmpeg/ffmpeg"
+   --vmaf-model-location="/path/to/your/vmaf_v0.6.1.json"
+   ```
+
+8. Remember to adjust the paths based on your system. To locate your VMAF model file, return to the cloned vmaf directory and find the `vmaf_v0.6.1.json` file.
+
 
 ## You Should Now Be Ready to Run This Program
 
