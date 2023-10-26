@@ -89,3 +89,5 @@ test
 2023-10-26 10:38:46,211 INFO easygpt.src.utils.logging OPENAI_API_KEY: sk-3Si6*******WkLz
 2023-10-26 10:39:05,066 INFO easygpt.src.utils.logging MODEL: gpt-4-0314
 2023-10-26 10:39:05,066 INFO easygpt.src.utils.logging OPENAI_API_KEY: sk-3Si6*******WkLz
+2023-10-26 10:40:32,784 INFO easygpt.src.utils.logging MODEL: gpt-3.5-turbo-16k
+2023-10-26 10:40:32,784 INFO easygpt.src.utils.logging OPENAI_API_KEY: sk-3Si6*******WkLz

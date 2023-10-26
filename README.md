@@ -14,13 +14,14 @@ Through unit testing, the goal is to prove that DALLE-3 is not fully optimized, 
 - Otherwise, it is as simple as running `[python-distro] -m easygpt` (run with `-h` flag for help) with zero setup necessary.
 
 # Minimal Requirements
-- Python 3.9.x (invoke using `pyenv` if you have multiple versions of Python. Even more details on how to set that up later.
-- Download using `[system-package-manager] install pyenv`)
+- Python 3.9.x (invoke using `pyenv` if you have multiple versions of Python. Even more details on how to set that up later).
+- Download using `[system-package-manager] install pyenv`
 - Run `pyenv local 3.9.x` or just `pyenv local 3.9`. It may take some time to install new Python versions.
 - Setup a `venv` (install using, Python 3.9.x, `python -m install venv`)
 - Check your python version by running `python --version`
 - If it reads `3.9.x`, you're good to go.
 - Install the requirements using `python -m pip install -r requirements.txt`
+- You should now be able to run main.py, as well as easygpt via `python -m easygpt`, designed to generate statistically significantly improved DALLE-3 images.
 
 ## It Starts with a Base prompt
 
