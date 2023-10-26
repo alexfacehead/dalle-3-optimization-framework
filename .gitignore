@@ -1,3 +1,6 @@
 base/*
 improved/*
 analyzed/*
+venv
+.DS_Store
+sort_by_similarity.py
