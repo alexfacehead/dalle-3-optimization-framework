@@ -16,7 +16,7 @@ def main(
     model: Optional[str] = "gpt-3.5-turbo-16k",
     temperature: Optional[float] = 0.33,
     query_mode: Optional[bool] = False,
-    openai_api_key: Optional[str]= None,
+    openai_api_key: Optional[str]= "",
     super_charged: Optional[bool]=False,
     prompt_dir: Optional[str]=os.path.join(os.getcwd(), "resources", "prompts")
 ):

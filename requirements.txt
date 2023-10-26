@@ -3,6 +3,9 @@ Pillow
 scikit-image
 pybrisque
 libsvm
-pytoch
+torch
 pytorch_msssim
 openai
+termcolor
+python-dotenv
+virtualenv

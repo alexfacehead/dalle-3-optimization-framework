@@ -13,36 +13,34 @@ Through unit testing, the goal is to prove that DALLE-3 is not fully optimized, 
 - An interface for developing your own prompt enhancers using my "EasyGPT-3.5" prompt generator (requires API key. The original repository, with instructions, if you're interested, is located at [EasyGPT-3.5](https://github.com/alexfacehead/EasyGPT-3.5))
 - Otherwise, it is as simple as running `[python-distro] -m easygpt` (run with `-h` flag for help) with zero setup necessary.
 
+# Minimal Requirements
+- Python 3.9.x (invoke using `pyenv` if you have multiple versions of Python. Even more details on how to set that up later.
+- Download using `[system-package-manager] install pyenv`)
+- Run `pyenv local 3.9.x` or just `pyenv local 3.9`. It may take some time to install new Python versions.
+- Setup a `venv` (install using, Python 3.9.x, `python -m install venv`)
+- Check your python version by running `python --version`
+- If it reads `3.9.x`, you're good to go.
+- Install the requirements using `python -m pip install -r requirements.txt`
+
 ## It Starts with a Base prompt
 
 This program aims to take a base prompt, extract the output, and save it. Then, the prompt is optimized via various possibilities (mostly through gpt-4-0314 model optimizations via the API) and the resultant, new, "improved" images are saved as well.
 
-# Documentation for Setup
+# Documentation for Setup for Building Dependencies
 This project requires only a few dependencies, but setting up FFmpeg with VMAF support can be tricky. It requires a few steps.
 
 First and foremost, create a `venv` using your preferered Python version from the root directory, source it, and then install dependencies using `[python-distro] -m pip install -r requirements.txt`
 
-To do this:
-0. Have `virtualenv` installed and be familiar with how to seutp a a venv (more on this later)
-1. Simply create a venv by running `[python-distro] venv venv` from the root directory.
-2. Run `source venv/bin/activate`
-3. Run `[python-distro] venv venv`
-4. Run `[python-distro] -m pip install -r requirements.txt`
-5. 
-- If you are encountering errors, run `[python-distro] -m pip install virtualenv`
-- Then run `[python-distro] -m venv venv`
-- Then, finally, run `source venv/bin/activate`
-
 ## Setup the Dependencies and First Build for libvmaf 
-0. Deactivate your venv by running `deactivate` if it is still active (as indicated in your terminal with `(venv)` displayed. If the command is not recognized; your venv is deactivated or you have not installed venv properly.)
+0. **Deactivate your current venv** by running `deactivate` if it is still active (as indicated in your terminal with `(venv)` displayed. If the command is not recognized; your venv is deactivated or you have not installed venv properly.)
 
 1. Run `git clone https://github.com/Netflix/vmaf.git` to a directory of your choosing - preferably within your project directory, perhaps within a venv. Wherever it is accessible - rememember the path you installed it to.
 2. Navigate to your vmaf directory, and `cd` into it.
-3. cd into `libvmaf` and then build `libvmaf`, which will be explained eblow.
+3. cd into `libvmaf` and then build `libvmaf`, which will be explained below.
 4. Install pyenv via [system-package-manager] install pyenv
-5. run `pyenv install 3.7` (minimum to get libvmaf working)
-6. run `pyenv local 3.7`
-7. Since you're in the libvmaf directory, create a venv (`python --version` first to check that you're using 3.7)
+5. run `pyenv install 3.7.17` (minimum to get libvmaf working)
+6. run `pyenv local 3.7.17`
+7. Since you're in the libvmaf directory, create a venv (`python --version` first to check that you're using 3.7.17)
 8. Once confirming the version, run `python -m venv venv`
 9. Run `source venv/bin/activate`
 10. Run `python -m pip install meson`
@@ -87,10 +85,9 @@ To do this:
 7. Once VMAF support is verified, use the following parameters in your program:
    ```
    --ffmpeg-location="/usr/local/bin/FFmpeg/ffmpeg"
-   --vmaf-model-location="/path/to/your/vmaf_v0.6.1.json"
    ```
 
-8. Remember to adjust the paths based on your system. To locate your VMAF model file, return to the cloned vmaf directory and find the `vmaf_v0.6.1.json` file.
+8. Remember to adjust the paths based on your system!
 
 
 ## You Should Now Be Ready to Run This Program
