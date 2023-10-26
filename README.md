@@ -8,9 +8,10 @@ Through unit testing, the goal is to prove that DALLE-3 is not fully optimized, 
 
 ## Features
 - Detailed metrics with standardization to help assess relative image quality
-- Detailed instructions on how to run your own evals
+- Detailed instructions on how to run your own evals.
 - Premade prompt enhancers that can be used with ChatGPT if you lack an API key or API gpt-4 access.
-- (Almost there!) An interface for developing your own prompt enhancers using my "EasyGPT-3.5" prompt generator (requires API key and `.env` setup, repository, with instructions, located at [EasyGPT-3.5](https://github.com/alexfacehead/EasyGPT-3.5))
+- An interface for developing your own prompt enhancers using my "EasyGPT-3.5" prompt generator (requires API key. The original repository, with instructions, if you're interested, is located at [EasyGPT-3.5](https://github.com/alexfacehead/EasyGPT-3.5))
+- Otherwise, it is as simple as running `[python-distro] -m easygpt` (run with `-h` flag for help) with zero setup necessary.
 
 ## It Starts with a Base prompt
 
@@ -97,7 +98,7 @@ To do this:
 Now, please enjoy running the evaluations and observing any quality increases, and feel free to provide compelling datasets and share them with the community. To contribute, if you want to be a collaborator, contact me directly at ahugi@uw.edu with "DALLE 3 EVALUATION REPO" as the title for a faster response.
 
 ## Generating Your Own Prompts
-Using EasyGPT-3.5 is as easy as setting your environment variables within the directory. This will be streamlined in future versions, but command-line support is already active.
+Using EasyGPT-3.5 is as easy as setting your environment variables within the directory. This will be streamlined in future versions, but command-line support is already active, so you 
 
 Run easygpt by executing `[python-distro] -m easygpt` and then use it to generate enhanced prompts (by default, it uses gpt-3.5-turbo-16k)
 
@@ -116,9 +117,10 @@ This will be further adapted and streamlined for future versions of this project
 
 # TO DO
 - Easier system for automatically generating images, grabbing them, and arranging them so they may be tested.
-- Unit testing support.
+- Streamlined unit testing support.
 - Add more metrics.
 - Fine-tune the standardized formula.
 - Incorporate human-sampled feedback.
 - Use iterative prompting techniques.
 - Explore cheaper models and compare results.
+- Modularize better!
