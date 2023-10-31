@@ -1,5 +1,4 @@
 
-from typing import Optional
 def evaluate_image_improvement_v2(metrics):
     score = 0
     mse_weight = 3

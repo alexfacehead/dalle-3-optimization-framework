@@ -24,7 +24,7 @@ class ChatCompletionGenerator:
         openai.api_key = self.openai_api_key
         self.temperature = temperature
 
-    def generate_completion(self, messages: List[dict], temperature: Optional[float]=0.1, model: Optional[str] = "gpt-3.5-turbo-16k") -> str:
+    def generate_completion(self, messages: List[dict], temperature: Optional[float]=0.1, model: Optional[str] = "gpt-3.5-turbo-16k-0613") -> str:
         print(f"MODEL ACTUALLY BEING USED: {model}")
         """
         Generates a completion using OpenAI's ChatCompletion API.

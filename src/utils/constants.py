@@ -114,8 +114,7 @@ And here is the code to be updated using your skills, the provided context, etc:
 USER_MESSAGE_TWO = USER_MESSAGE_TWO + STATIC_CODE + "\n\n" + "Without introducing new parameters, can you update this code, especially when taking into consideration the basal prompt provided earlier?"
 
 DEFAULT_PLACEHOLDER_PROMPT = "Make an image."
-AI_FILE_IMPORTS = """
-from typing import Optional\n"""
+AI_FILE_IMPORTS = """"""
 
 SYSTEM_MESSAGE_GPT_3_5 = """You follow your user's directions precisely, returning only what they request."""
 

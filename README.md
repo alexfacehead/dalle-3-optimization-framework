@@ -10,8 +10,8 @@ Through unit testing, the goal is to prove that DALLE-3 is not fully optimized, 
 - Detailed metrics with standardization to help assess relative image quality
 - Detailed instructions on how to run your own evals.
 - Premade prompt enhancers that can be used with ChatGPT if you lack an API key or API gpt-4 access.
-- An interface for developing your own prompt enhancers using my "EasyGPT-3.5" prompt generator (requires API key. The original repository, with instructions, if you're interested, is located at [EasyGPT-3.5](https://github.com/alexfacehead/EasyGPT-3.5))
-- Otherwise, it is as simple as running `[python-distro] -m easygpt` (run with `-h` flag for help) with zero setup necessary.
+- Premade prompt enhancers that utilize gpt-3.5-turbo-16k if cost is a limiting factor.
+- To run your own prompt enhancer, follow the guide below, then simply execute `[pythondistro] src/easy_prompt_enhancer/prompt_enhancer.py "Make a pretty cat"`` or with whatever base prompt you desire.
 
 # Minimal Requirements
 - Python 3.9.x (invoke using `pyenv` if you have multiple versions of Python. Even more details on how to set that up later).

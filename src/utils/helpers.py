@@ -8,12 +8,13 @@ from src.completions.completion_generator import ChatCompletionGenerator
 
 loaded_dot_env = load_dotenv()
 
-def update_message_with_new_prompt(input_prompt) -> str:
+def update_message_with_new_prompt(input_prompt, replacement: Optional[str] = None) -> str:
     file_path = os.path.join(os.getcwd(), "src/resources/prompt_keys/v1_bengal_cat_base.txt")
     
     with open(file_path, "r") as file:
         new_prompt = file.read().strip()
-    
+    if replacement != None:
+        new_prompt = replacement
     updated_message = input_prompt.format(new_prompt)
     return updated_message
 
