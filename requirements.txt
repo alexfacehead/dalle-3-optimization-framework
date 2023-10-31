@@ -3,7 +3,6 @@ Pillow
 scikit-image
 pybrisque
 libsvm
-torch
 pytorch_msssim
 openai
 termcolor

@@ -3,7 +3,6 @@ improved/*
 analyzed/*
 venv
 .DS_Store
-sort_by_similarity.py
 EasyGPT-3.5/tree_structure.sh
 EasyGPT-3.5/file_structure.sh
 EasyGPT-3.5/.env
@@ -15,3 +14,4 @@ __pycache__
 .env
 tree_structure.sh
 file_structure.sh
+new_venv

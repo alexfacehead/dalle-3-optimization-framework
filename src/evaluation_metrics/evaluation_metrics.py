@@ -1,4 +1,14 @@
-def evaluate_image_improvement(metrics):
+from typing import Optional
+from src.utils.constants import *
+from termcolor import colored
+from src.utils.helpers import analyze_prompt
+
+def normalize_metric(metric, value, config):
+    if metric in config:
+        return config[metric]['weight'] * config[metric]['normalize'](value)
+    return 0
+
+def evaluate_image_improvement(metrics, prompt: Optional[str]):
     """
     Evaluate the improvement of an image based on various metrics.
     
@@ -9,7 +19,16 @@ def evaluate_image_improvement(metrics):
     - score (float): A score indicating the degree of improvement. Higher values indicate more significant improvement.
     - summary (str): A textual summary of the evaluation.
     """
+    if prompt != DEFAULT_PLACEHOLDER_PROMPT:
+       print(colored("Entered AI adaptive metric alterations block", 'red'))
+       ai_altered_evaluation_function = analyze_prompt(model="gpt-4-0314", prompt=prompt)
+       print(colored("RESULTANT CODE GENERATED", 'magenta'))
     
+       with open("ai_adjusted_eval_metric.py", 'w') as file:
+            file.write(AI_FILE_IMPORTS)
+            file.close()
+       with open("ai_adjusted_eval_metric.py", "a") as file:
+            file.write(ai_altered_evaluation_function)
     # Initialize the score
     score = 0
     
