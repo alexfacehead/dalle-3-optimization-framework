@@ -21,7 +21,7 @@ Through unit testing, the goal is to prove that DALLE-3 is not fully optimized, 
 - Check your python version by running `python --version`
 - If it reads `3.9.x`, you're good to go.
 - Install the requirements using `python -m pip install -r requirements.txt`
-- You should now be able to run main.py, as well as easygpt via `python -m easygpt`, designed to generate statistically significantly improved DALLE-3 images.
+- You should now be able to run main.py, as well as generate your own prompts as mentioned above.
 
 ## It Starts with a Base prompt
 
