@@ -2,6 +2,7 @@ from typing import Optional
 from src.utils.constants import *
 from termcolor import colored
 from src.utils.helpers import analyze_prompt
+from src.metrics import compare_images
 
 def normalize_metric(metric, value, config):
     if metric in config:
@@ -21,7 +22,7 @@ def evaluate_image_improvement(metrics, prompt: Optional[str]):
     """
     if prompt != DEFAULT_PLACEHOLDER_PROMPT:
        print(colored("Entered AI adaptive metric alterations block", 'red'))
-       ai_altered_evaluation_function = analyze_prompt(model="gpt-4-0314", prompt=prompt)
+       ai_altered_evaluation_function = analyze_prompt(model="gpt-3.5-turbo-16k-0613", prompt=prompt)
        print(colored("RESULTANT CODE GENERATED", 'magenta'))
     
        with open("ai_adjusted_eval_metric.py", 'w') as file:

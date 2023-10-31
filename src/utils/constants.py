@@ -89,15 +89,14 @@ USER_MESSAGE_TWO = """Great. Given the following:
 
 Given a textual prompt, such as "Can you create an image of a pendulum board with crystal pendulum swinging over with a witch with long blonde hair using it," analyze the provided Python code for evaluating the improvement of an image based on various metrics. The code takes a dictionary of metrics as input and calculates a weighted score to determine the degree of improvement. Consider the following aspects while analyzing the code:
 
-1. Are the chosen metrics - without removing any metrics - appropriate for evaluating image improvement, considering the varying nature of the textual prompts?
+1. Are the chosen metrics - without removing any metrics or adding any paremeters - appropriate for evaluating image improvement, considering the varying nature of the textual prompts?
 2. Are the weights assigned to each metric reasonable in the context of different prompts?
 3. Can the normalization techniques used for each metric be improved to better handle varying prompts?
 4. Can the code be refactored or optimized for better readability or performance, given the varying nature of the prompts?
 
 Additionally, provide suggestions for modifying the code, such as altering the weights, normalization techniques, or incorporating new metrics, to improve the evaluation of image improvement in the context of varying prompts. Keep in mind the following feedback when providing suggestions:
 
-
-1. Try your best not to omit metrics, and do not add new parameters. Retain the integrity of the original structure.
+1. Try your best not to omit metrics, and *do not* add new parameters. Retain the integrity of the original structure.
 2. For the MSE, Edge MSE, and FFT MSE, you may want to experiment with different scaling factors to better balance their contributions to the overall score.
 3. The PSNR normalization assumes a maximum value of 50. You may want to make this value adjustable or use a more adaptive normalization technique.
 4. The BRISQUE difference normalization assumes a range up to 100. You may want to verify if this range is appropriate for your dataset or adjust it accordingly.
@@ -106,7 +105,7 @@ Additionally, provide suggestions for modifying the code, such as altering the w
 
 Ensure that your suggestions can be easily integrated with the existing code without requiring a complete overhaul of the code structure and can adapt to the varying nature of textual prompts.
 
-This includes avoiding adding contrived or unnecessary functions or parameters, unless you deem it absolutely necessary. Focus on tweaking the metrics as they are in relation to the prompt used, using your semantic analysis skills.
+This includes avoiding adding contrived or unnecessary functions or parameters. Focus on altering the metrics as they are in relation to the original text prompt provided to you below, using your semantic analysis skills.
 
 Here is the code in question, with the prompt `{}`:
 

@@ -37,7 +37,7 @@ def analyze_prompt(prompt: Optional[str], model: Optional[str] = "gpt-3.5-turbo-
                                           {"role": "user", "content": user_message_updated}]
         
         # Generate first big completion (ETA is 1-2 minutes if using gpt-4)
-        resultant_feedback = completion_generator.generate_completion(messages=list_msgs_gen_code_large, model="gpt-4-0314")
+        resultant_feedback = completion_generator.generate_completion(messages=list_msgs_gen_code_large, model="gpt-3.5-turbo-16k-0613", temperature=0.1)
 
         # Design gpt-3.5-turbo-16k-0613 cheaper prompt to extract code
         user_content_code_small = USER_FEEDBACK_SMALL + "\"\"\"" + resultant_feedback + "\"\"\""
@@ -45,7 +45,7 @@ def analyze_prompt(prompt: Optional[str], model: Optional[str] = "gpt-3.5-turbo-
                                   {"role": "user", "content": user_content_code_small}]
         
         # Final, pure, AI-updated resultant code generated
-        resultant_code = completion_generator_small.generate_completion(messages=list_msgs_extract_code_small, model="gpt-3.5-turbo-16k-0613")
+        resultant_code = completion_generator_small.generate_completion(messages=list_msgs_extract_code_small, model="gpt-3.5-turbo-16k-0613", temperature=0.1)
         
         res = (f"prompt used for analysis: " + prompt)
         print(colored(res, 'green'))

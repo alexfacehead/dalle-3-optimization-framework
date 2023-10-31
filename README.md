@@ -35,7 +35,7 @@ First and foremost, create a `venv` using your preferered Python version from th
 ## Setup the Dependencies and First Build for libvmaf 
 0. **Deactivate your current venv** by running `deactivate` if it is still active (as indicated in your terminal with `(venv)` displayed. If the command is not recognized; your venv is deactivated or you have not installed venv properly.)
 
-1. Run `git clone https://github.com/Netflix/vmaf.git` to a directory of your choosing - preferably within your project directory, perhaps within a venv. Wherever it is accessible - rememember the path you installed it to.
+1. Run `git clone https://github.com/Netflix/vmaf.git` to a directory of your choosing - preferableay within your project directory, perhaps within a venv. Wherever it is accessible - rememember the path you installed it to.
 2. Navigate to your vmaf directory, and `cd` into it.
 3. cd into `libvmaf` and then build `libvmaf`, which will be explained below.
 4. Install pyenv via [system-package-manager] install pyenv
@@ -96,22 +96,10 @@ First and foremost, create a `venv` using your preferered Python version from th
 Now, please enjoy running the evaluations and observing any quality increases, and feel free to provide compelling datasets and share them with the community. To contribute, if you want to be a collaborator, contact me directly at ahugi@uw.edu with "DALLE 3 EVALUATION REPO" as the title for a faster response.
 
 ## Generating Your Own Prompts
-Using EasyGPT-3.5 is as easy as setting your environment variables within the directory. This will be streamlined in future versions, but command-line support is already active, so you 
-
-Run easygpt by executing `[python-distro] -m easygpt` and then use it to generate enhanced prompts (by default, it uses gpt-3.5-turbo-16k)
-
-**You don't need GPT-4 API access for this, just an OpenAI API account, which is as easy as signing up on their website. It is incredibly cheap to use the gpt-3.5 series models!**
-
-Run it using: `[python-distro] EasyGPT-3.5/main.py` and use the `-h` flag for help. If you do not wish to setup your environment template (located at `EasyGPT-3.5/env.template` - rename it to `.env` if you do wish to use it) then simply use the commandline flags, as speciefied by the `-h` flag.
-
-Prompt it by asking it a simple 1-2 sentence question, for example:
-`How can I improve an image prompt designed for a state-of-the-art language model?`
-
-It will return to you a series of expanded prompts and context, where the final two results are:
-1. A "tree-of-thought", expertly optimized prompt designed to answer your question.
-2. An answer, which you can then use as context for applying an update to your existing prompt.
-
-This will be further adapted and streamlined for future versions of this project.
+TBA:
+- Better chat framework
+- More customizability
+- Incorporation of EasyGPT-3.5?
 
 # TO DO
 - Easier system for automatically generating images, grabbing them, and arranging them so they may be tested.

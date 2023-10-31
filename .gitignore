@@ -1,4 +1,5 @@
 base/*
+logs/*
 improved/*
 analyzed/*
 venv
